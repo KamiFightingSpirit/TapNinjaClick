@@ -1,0 +1,14 @@
+{
+  "name": "auto-mouse-clicker",
+  "version": "1.0.0",
+  "description": "Right and Left CLicks Mouse for Auto Farming",
+  "main": "index.js",
+  "scripts": {
+    "test": "test auto-click"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "robotjs": "^0.6.0"
+  }
+}
