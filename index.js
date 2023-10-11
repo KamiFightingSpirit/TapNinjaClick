@@ -8,9 +8,10 @@ setInterval(performClick, 400);
 function performClick() {
   mouseClickCount++;
   robot.mouseClick();
-  if(mouseClickCount % 50 === 0) {
+  //average firefly respawn time can be found in settings
+  if(mouseClickCount % 220 === 0) { 
     const currentPosition = robot.getMousePos();
-    robot.moveMouse(currentPosition.x  - 50, currentPosition.y);
+    robot.moveMouse(currentPosition.x + 50, currentPosition.y);
     robot.mouseClick();
     robot.moveMouse(currentPosition.x, currentPosition.y);
   }
