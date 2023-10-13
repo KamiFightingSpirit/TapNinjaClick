@@ -9,24 +9,14 @@ function performClick() {
   mouseClickCount++;
   robot.mouseClick();
   //average firefly respawn time can be found in settings
-  if(mouseClickCount % 220 === 0) { 
+  if(mouseClickCount % 140 === 0) { 
     const currentPosition = robot.getMousePos();
     robot.moveMouse(currentPosition.x + 50, currentPosition.y);
     robot.mouseClick();
+    ropeHookCount++;
     robot.moveMouse(currentPosition.x, currentPosition.y);
   }
-
-  // if(mouseClickCount % 3 === 0) {
-  //   const currentPosition = robot.getMousePos();
-  //   robot.moveMouse(currentPosition.x, currentPosition.y + 800);
-  //   robot.keyToggle('shift', 'down');
-  //   robot.mouseClick('left');
-  //   robot.mouseClick('left');
-  //   robot.keyToggle('shift', 'up');
-  //   robot.moveMouse(currentPosition.x, currentPosition.y);
-  // }
 }
-
 
 // Function to simulate pressing the "q" key
 function simulateKeyPress() {
@@ -40,7 +30,6 @@ function scheduleKeyPress() {
   // Schedule the next keypress after 20 seconds (20000 milliseconds)
   setTimeout(scheduleKeyPress, 8000);
 }
-
 
 process.on('SIGINT', () => {
   console.log(`This program performed ${ropeHookCount} ropehooks and ${mouseClickCount} mouseclicks for you!`)

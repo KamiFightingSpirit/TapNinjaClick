@@ -4,7 +4,8 @@
   "description": "Right and Left CLicks Mouse for Auto Farming",
   "main": "index.js",
   "scripts": {
-    "test": "test auto-click"
+    "test": "test auto-click",
+    "clicker": "node ./clicker.js"
   },
   "author": "",
   "license": "ISC",
