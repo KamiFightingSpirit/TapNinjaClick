@@ -1,6 +1,6 @@
 const robot = require("robotjs");
-const throwShuriken = require("./lib/actions/throwShuriken");
-const mouseClick = require("./lib/actions/mouseClick");
+const throwShuriken = require("./src/actions/throwShuriken");
+const mouseClick = require("./src/actions/mouseClick");
 
 let ropeHookCount = 0;
 let mouseClickCount = 0;
